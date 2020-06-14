@@ -7,7 +7,7 @@ var pool = mysql.createPool({
 	connectionLimit: 5,
 	host: 'localhost',
 	user: 'root',
-	database: 'shopping',
+	database: 'tutorial',
 	password: '7918'
 });
 
@@ -40,7 +40,7 @@ router.post('/', function(req,res,next){
 	
 	pool.getConnection(function (err, connection)
 	{
-		var sql = "SELECT * FROM Member_info WHERE email=?";
+		var sql = "SELECT * FROM board WHERE email=?";
 		connection.query(sql, [email], function(err, result){
 			if(err) console.error(err);
 			
@@ -51,7 +51,7 @@ router.post('/', function(req,res,next){
 			else{
 				pool.getConnection(function (err, connection)
 				{
-					var sql = "INSERT INTO Member_info(email, passwd, username, address, phone) values(?,?,?,?,?)";
+					var sql = "INSERT INTO board(email, passwd, username, address, phone) values(?,?,?,?,?)";
 					connection.query(sql, [email, passwd, username, address, phone], function(err, result){
 						if(err) console.error(err);
 						
