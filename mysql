@@ -1,0 +1,13 @@
+use tutorial;
+create table board(
+	id int unsigned not null primary key auto_increment,
+    creator_id varchar(100) not null,
+    title varchar(100) not null,
+    content mediumtext not null,
+    passwd varchar(100) not null,
+    hit int unsigned not null default 0,
+    image varchar(100) not null default 0,
+    USER_ID varchar(100) not null,
+    USER_PASS varchar(100) not null,
+    cnt varchar(100) not null
+    );
