@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var joinForm = require('./routes/joinForm');
 var login = require('./routes/login');
+var userinfo = require('./routes/userinfo');
 var app = express();
 
 // view engine setup
@@ -23,8 +24,9 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/login', login);
 app.use('/joinForm',joinForm);
-
+app.use('/userinfo',userinfo);
 // catch 404 and forward to error handler
+
 app.use(function(req, res, next) {
   next(createError(404));
 });
@@ -51,3 +53,5 @@ app.use('/', express.static(__dirname + '/www'));
 app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); // redirect bootstrap JS 
 app.use('/js', express.static(__dirname + '/node_modules/jquery/dist')); // redirect JS jQuery 
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css')); // redirect CSS bootstrap
+
+

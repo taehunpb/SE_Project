@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<style>
+.well {
+ height: 60px;
+ width: 100vw;
+ color: black;
+ background-color: #7a0000;
+ padding: 10px 0px 30px 10px;
+}
+.container{
+  margin: 20px 0px 20px 10px;
+}
+</style>
+<head>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+      <title>고객관리</title>
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    </head>
+
+<body class="Head_nav">
+    <div style="overflow:scroll; width:100vw; height:100vh;">
+
+        <!-- Navigation -->
+        <header>
+          <nav>
+            <div class="text-right">
+
+                  <div class="btn-group" style="background-color:white-space">
+                    <div col-md-3>
+                      <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" onclick="location.href='/mypage/order_list';">마이페이지</button>
+                                <button type="button" class="btn btn-default" onclick="location.href='/login/logout';">로그아웃</button>
+                                <button type="button" class="btn btn-default" onclick="location.href='/userinfo';">고객센터</button>
+                              </span>
+                    </div>
+                  </div>
+            </div>
+          </nav>
+        </header>
+        <div class="text-center">
+            <div class="col-lg-12">
+              
+              <a href="/ceo">
+                          <img class="img-responsive center-block" src="/images/ics.png" alt="logo">
+                      </a>
+              <br>
+              <br>
+              <br>
+            </div>
+          </div>
+          
+  <div class="row">
+
+    <div class="col-9">
+    
+      <div class="well"><h3><span style="color:white">회원목록</span></h3></div>
+      <div class="col-9 container" >       
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <th>이메일(email)</th>
+              <th>이름</th>
+              <th>주소</th>
+              <th>전화번호</th>
+
+            </tr>
+            <% for(var i=0; i < rows.length; i++){%>
+            <tr>
+              <td class="font-weight-bold"><%=rows[i].email%></td>
+              <td><%=rows[i].username%></td>
+              <td><%=rows[i].address%></td>
+              <td><%=rows[i].phone%></td>
+            </tr>
+            <%}%>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+
+</html>
