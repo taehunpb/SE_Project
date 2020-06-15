@@ -5,9 +5,11 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 var joinForm = require('./routes/joinForm');
 var login = require('./routes/login');
+var user = require('./routes/user');
+var admin = require('./routes/admin');
+var seller = require('./routes/seller');
 var userinfo = require('./routes/userinfo');
 var app = express();
 
@@ -21,12 +23,15 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/login', login);
+app.use('/user', user);
+app.use('/admin', admin);
+app.use('/seller', seller);
 app.use('/joinForm',joinForm);
 app.use('/userinfo',userinfo);
-// catch 404 and forward to error handler
 
+
+// catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
@@ -53,5 +58,3 @@ app.use('/', express.static(__dirname + '/www'));
 app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); // redirect bootstrap JS 
 app.use('/js', express.static(__dirname + '/node_modules/jquery/dist')); // redirect JS jQuery 
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css')); // redirect CSS bootstrap
-
-

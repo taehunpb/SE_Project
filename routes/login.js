@@ -20,6 +20,7 @@ router.post('/', function(req,res){
   
   var email = req.body.email;
   var passwd = req.body.passwd;
+  var id = req.body.id;
   
   pool.getConnection(function (err, connection)
   {
@@ -32,12 +33,18 @@ router.post('/', function(req,res){
 
            var DB_PW = result[0].passwd;
              if(DB_PW == passwd){   // 입력한 passwd가 일치하는 경우
-                //req.session.username = result[0].username;   // 세션에 정보 저장
-               // req.session.email= result[0].email;
-                //req.session.admin=result[0].admin;
-                //req.session.sale=result[0].sale;
-                res.redirect('/');
+               if(email == 'admin@admin'){
+                res.redirect('/admin');
                 connection.release();
+               }
+               else if(email == 'seller@seller'){
+                  res.redirect('/seller');
+                connection.release();
+               }
+               else{
+                res.redirect('/user');
+                connection.release();
+               }
               }
               else{
                  res.send("<script>alert('패스워드가 일치하지 않습니다.');history.back();</script>");
