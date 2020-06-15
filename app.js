@@ -6,7 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var join = require('./routes/joinForm');
+var joinForm = require('./routes/joinForm');
 var login = require('./routes/login');
 var app = express();
 
@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/login', login);
-app.use('/joinForm',join);
+app.use('/joinForm',joinForm);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -51,5 +51,3 @@ app.use('/', express.static(__dirname + '/www'));
 app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); // redirect bootstrap JS 
 app.use('/js', express.static(__dirname + '/node_modules/jquery/dist')); // redirect JS jQuery 
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css')); // redirect CSS bootstrap
-
-
