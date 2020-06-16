@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var path = require('path');
+//var multipart = require('connect-multiparty');
+//var multipartMiddleware = multipart();
 var fs = require('fs');
 
 var mysql = require('mysql');
@@ -14,6 +16,8 @@ var pool = mysql.createPool({
 
 
 var multer = require('multer');
+//var upload = multer({dest:'uploads'})
+
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, 'public/uploads/');
@@ -26,7 +30,7 @@ var upload = multer({storage : storage});
 
 
 router.get('/', function (req, res, next) {
-    res.render('proregi');
+    res.render('promodi');
 });
 
 router.post('/',  upload.single('image'),function (req, res, next) {
