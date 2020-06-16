@@ -17,6 +17,9 @@ var userinfo = require('./routes/userinfo');
 var statistic = require('./routes/statistic');
 var mypage = require('./routes/mypage');
 var prolist = require('./routes/prolist');
+var seller_mypage = require('./routes/seller_mypage');
+var admin_mypage = require('./routes/admin_mypage');
+
 var app = express();
 
 // view engine setup
@@ -39,8 +42,10 @@ app.use('/joinForm',joinForm);
 app.use('/prolist',prolist);
 app.use('/deliverForm',deliverForm);
 app.use('/statistic',statistic);
-app.use('/mypage',mypage);
+app.use('/admin_mypage',admin_mypage);
+app.use('/seller_mypage',seller_mypage);
 app.use('/userinfo',userinfo);
+app.use('/mypage',mypage);
 
 
 // catch 404 and forward to error handler

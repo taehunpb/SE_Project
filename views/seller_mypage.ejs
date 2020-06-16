@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style type = "text/css">	p{text-align : cennter;}</style>
+
+	<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<title>ICS</title>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	
+		
+	</head>
+<body >
+	<div style="overflow:scroll; width:100vw; height:100vh;">
+
+	<td><!--상단 메뉴 인클루드--><% include ./top2_seller.ejs %></td>
+    <br><br><br>
+    
+	<nav>
+		<div class="text-center">      
+			  <div class="btn-group" style="background-color:white-space">
+				<div col-md-3>
+				  <span class="input-group-btn">
+                            <button type="button" class="btn btn-outline-secondary btn-lg" onclick="location.href='/order';">상품 주문 현황</button>
+                            <button type="button" class="btn btn-outline-secondary btn-lg" onclick="location.href='/service';">판매 내역 확인</button>
+							<button type="button" class="btn btn-outline-secondary btn-lg" onclick="location.href='/order';">회원정보 조회</button>
+							<button type="button" class="btn btn-outline-secondary btn-lg" onclick="location.href='/order';">Q&A 리스트</button>
+							<button type="button" class="btn btn-outline-secondary btn-lg" onclick="location.href='/order';">공지사항</button>
+				  </span>
+				</div>
+			  </div>
+		</div>
+	  </nav>
+	  <br><br>
+
+	  <p style="text-align: center;">
+		<img src="/images/person.jpg"  with="50" height="50" >
+	
+	
+		<strong>임미옥</strong> 님은 판매자이십니다.</p>
+
+		<br><br><br>
+
+		<div style="text-align: center;">
+
+
+			<h6>문의글 	<strong>4,580개 </strong><span class="badge badge-secondary"></h6>
+			<h6>총 상품수		<strong>402개 </strong><span class="badge badge-secondary"></h6>
+
+			<h6>회원수		<strong>1,024명 </strong><span class="badge badge-secondary"></h6>
+			<h6>하루 조회수<strong>10,800회 </strong><span class="badge badge-secondary"></h6>
+
+			</p>
+		</div>
+	<br><br>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+</div>
+</body>
+</html>
