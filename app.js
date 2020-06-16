@@ -10,6 +10,7 @@ var login = require('./routes/login');
 var user = require('./routes/user');
 var admin = require('./routes/admin');
 var seller = require('./routes/seller');
+var proregi = require('./routes/proregi');
 var userinfo = require('./routes/userinfo');
 var statistic = require('./routes/statistic');
 var app = express();
@@ -28,9 +29,11 @@ app.use('/login', login);
 app.use('/user', user);
 app.use('/admin', admin);
 app.use('/seller', seller);
+app.use('/proregi', proregi);
 app.use('/joinForm',joinForm);
+app.use('/statistic',statistic);
 app.use('/userinfo',userinfo);
-app.use('/statistic', statistic);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
