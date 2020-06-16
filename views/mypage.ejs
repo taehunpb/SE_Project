@@ -1,82 +1,69 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+<style type = "text/css">	p{text-align : cennter;}</style>
+
 	<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
-		<title>SHOPPING</title>
+		<title>ICS</title>
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	
 		
 	</head>
-<body class="Head_nav" style="font-size:100%;">
-	<header>
-        <nav>
-            <div class="text-right" align="left">
-                    <div col-md-3>
-                          <a href="/"><button type="button" class="btn btn-default">홈</button></a>
-                    </div>
-            </div>
-        </nav>
-	</header>
-	
-	<article class="container" id="mypage">
-		<div class="page-header" style="color:#810707;" align="left">
-		<br><br><h1><strong>MyPage</strong></h1></br></br>
-		</div>
-		<tr>
-			<td>
-				<form method="post" action="/mypage" onsubmit="return onSubmit()" >
-					<table width="20%" bgcolor="transparent" cellpadding="5" cellspacing="1" border="3">
-						<tr>
-							<td style="color:black; font-size:1em;" align="center">
-							
-								<a href="/order_list" <strong>주문 내역 조회</strong> </a>
-							</td>
-						</tr>
-						<tr>
-							<td style="color:black; font-size:1em;" align="center">
-								<strong>회원 정보</strong>
-							</td>
-						</tr>
-						<tr>
-							<td style="color:black; font-size:1em;" align="center">
-								<strong>관심 상품</strong>
-							</td>
-							
-						</tr>
-						<tr>
-							<td style="color:black; font-size:1em;" align="center">
-								<strong>적립금</strong>
-							</td>
-							
-						</tr>
-						<tr>
-							<td style="color:black; font-size:1em;" align="center">
-								<strong>쿠폰</strong>
-							</td>
-							
-						</tr>
-						
-					</table>
-					<br>
-					<br>
-				</form>
-			</td>
-		</tr>
-	</article>
-	
+<body >
+	<div style="overflow:scroll; width:100vw; height:100vh;">
 
-	<div>
-		<
-		<p>저희 쇼핑몰을 이용해주셔서 감사합니다.</p>
-		<strong>김수진 </strong><p>님은 [FAMILY] 회원이십니다.</p>
-	</div>
+		<td><!--상단 메뉴 인클루드--><% include ./top_index.ejs %></td>
+		<br><br><br>
+
+
+	<nav>
+		<div class="text-center">      
+			  <div class="btn-group" style="background-color:white-space">
+				<div col-md-3>
+				  <span class="input-group-btn">
+
+							<button type="button" class="btn btn-outline-secondary btn-lg" onclick="location.href='/order';">ORDER<br>주문내역 조회</button>
+							<button type="button" class="btn btn-outline-secondary btn-lg" onclick="location.href='/order';">PROFILE<br>회원정보 조회</button>
+							<button type="button" class="btn btn-outline-secondary btn-lg" onclick="location.href='/order';">WISHLIST<br>관심상품 조회</button>
+							<button type="button" class="btn btn-outline-secondary btn-lg" onclick="location.href='/order';">MILEAGE<br>적립금</button>
+							<button type="button" class="btn btn-outline-secondary btn-lg" onclick="location.href='/order';">COUPON<br>쿠폰</button>
+							<button type="button" class="btn btn-outline-secondary btn-lg" onclick="location.href='/order';">BOARD<br>게시물 관리</button>
+							<button type="button" class="btn btn-outline-secondary btn-lg" onclick="location.href='/order';">ADDRESS<br>배송 주소록 관리</button>
+				  </span>
+				</div>
+			  </div>
+		</div>
+	  </nav>
+	  <br><br>
+
+	  <p style="text-align: center;">
+		<img src="/images/person.jpg"  with="50" height="50" >
+	
+	
+		 저희 쇼핑몰을 이용해주셔서 감사합니다.
+		<strong>김수진</strong> 님은 [FAMILY] 회원이십니다.</p>
+
+		<br><br><br>
+
+		<div style="text-align: center;">
+
+
+			<h6>가용 적립금		<strong>4,580원 </strong><span class="badge badge-secondary"></h6>
+			<h6>사용 적립금		<strong>0원 </strong><span class="badge badge-secondary"></h6>
+
+			<h6>쿠폰		<strong>0개 </strong><span class="badge badge-secondary"></h6>
+			<h6>총 주문		<strong>70,800원 (2회)</strong><span class="badge badge-secondary"></h6>
+
+			</p>
+		</div>
+	<br><br>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/bootstrap.min.js"></script>
-
+</div>
 </body>
 </html>
