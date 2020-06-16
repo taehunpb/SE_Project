@@ -6,14 +6,17 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var joinForm = require('./routes/joinForm');
+var deliverForm = require('./routes/deliverForm');
 var login = require('./routes/login');
 var user = require('./routes/user');
 var admin = require('./routes/admin');
 var seller = require('./routes/seller');
 var proregi = require('./routes/proregi');
+var promodi = require('./routes/promodi');
 var userinfo = require('./routes/userinfo');
 var statistic = require('./routes/statistic');
 var mypage = require('./routes/mypage');
+var prolist = require('./routes/prolist');
 var app = express();
 
 // view engine setup
@@ -31,7 +34,10 @@ app.use('/user', user);
 app.use('/admin', admin);
 app.use('/seller', seller);
 app.use('/proregi', proregi);
+app.use('/promodi', promodi);
 app.use('/joinForm',joinForm);
+app.use('/prolist',prolist);
+app.use('/deliverForm',deliverForm);
 app.use('/statistic',statistic);
 app.use('/mypage',mypage);
 app.use('/userinfo',userinfo);

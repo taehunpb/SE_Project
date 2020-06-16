@@ -43,9 +43,9 @@
 </header>
 
 <div class="container">
-    <h1 style="color: #810707;">ADD PRODUCT</h1>
+    <h1 style="color: #810707;">MODIFY PRODUCT</h1>
     <br>
-    <form id="joinForm" action='/proregi' method='post'  enctype = "multipart/form-data">
+    <form id="joinForm" action='/promodi' method='post'  enctype = "multipart/form-data">
         <table class="table table-striped" width="400">
             <input type="hidden" name="team_id"/>
             <tr>
@@ -111,8 +111,9 @@
             <tr>
                 <td colspan="2">
                     <center>
-                        <input type="submit" class="btn btn-success" id="btnJoin" name="join" value="상품 등록">
+                        <input type="submit" class="btn btn-success" id="btnJoin" name="join" value="상품 수정">
                         <input type="reset" class="btn btn-danger" name="cancel" value="취소" onclick="location.href='/seller' ">
+                        <input type="del" class="btn btn-warning" name="delete" value="상품 삭제" onclick="location.href='/seller' ">
                     </center>
                 </td>
             </tr>
