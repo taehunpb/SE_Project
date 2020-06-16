@@ -14,6 +14,7 @@ var proregi = require('./routes/proregi');
 var userinfo = require('./routes/userinfo');
 var statistic = require('./routes/statistic');
 var mypage = require('./routes/mypage');
+var prolist = require('./routes/prolist');
 var app = express();
 
 // view engine setup
@@ -33,9 +34,9 @@ app.use('/seller', seller);
 app.use('/proregi', proregi);
 app.use('/joinForm',joinForm);
 app.use('/statistic',statistic);
-app.use('/mypage',mypage);
 app.use('/userinfo',userinfo);
-
+app.use('/mypage',mypage);
+app.use('/prolist', prolist);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
