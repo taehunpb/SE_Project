@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        .well {
+         height: 50px;
+         width: 100vw;
+         color: black;
+         background-color: #810707;
+         padding: 10px 0px 20px 10px;
+        }
+        .container{
+          margin: 20px 0px 20px 10px;
+        }
+    </style>
+<head bgcolor="white">
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Statistic</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+</head>
+
+<body>
+    <div style="overflow:scroll; width:100vw; height:100vh;">
+       <td><!--상단 메뉴 인클루드--><% include ./top.ejs %></td>
+       <div class="container-fluid">
+        <div class="row content">
+       <div class="col-sm-9">
+        <div class="well"><h5><span style="color:white">정산내역 확인</span></h5></div>
+        
+        
+        <hr>
+
+        <h5>총 매출 : 5,210,000원</h5>
+        <hr>
+        <h5>월 매출 : 3,466,000원</h5>
+        <hr>
+
+        <div class="well"><h5><span style="color:white">월간 판매 내역</span></h5></div>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>상품명</th>
+                    <th>가격</th>
+                    <th>구매자</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>하와이 오션 티셔츠 화이트</td>
+                    <td>23,400</td>
+                    <td>김태훈</td>
+                </tr>
+                <tr>
+                    <td>뮤트뮤즈</td>
+                    <td>387,000</td>
+                    <td>임미옥</td>
+                </tr>
+                <tr>
+                    <td>닥터마틴</td>
+                    <td>135,900</td>
+                    <td>김수진</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+</body>

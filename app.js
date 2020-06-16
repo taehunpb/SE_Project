@@ -11,6 +11,7 @@ var user = require('./routes/user');
 var admin = require('./routes/admin');
 var seller = require('./routes/seller');
 var userinfo = require('./routes/userinfo');
+var statistic = require('./routes/statistic');
 var app = express();
 
 // view engine setup
@@ -29,7 +30,7 @@ app.use('/admin', admin);
 app.use('/seller', seller);
 app.use('/joinForm',joinForm);
 app.use('/userinfo',userinfo);
-
+app.use('/statistic', statistic);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
