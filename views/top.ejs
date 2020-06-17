@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    <style>
+        .well {
+         height: 60px;
+         width: 100vw;
+         color: black;
+         background-color: #7a0000;
+         padding: 10px 0px 30px 10px;
+        }
+        .container{
+          margin: 20px 0px 20px 10px;
+        }
+        </style>
 <head bgcolor="white">
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,8 +20,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
 </head>
 
-<body>
-<div style="overflow:scroll; width:100vw; height:100vh;">
+<body style="overflow:hidden;background-color:#f0f0f0;">
+  <div style="overflow:scroll; width:100vw; height:100vh;">
   <td><!--상단 메뉴 인클루드--><% include ./top_index.ejs %></td>
   <!-- Navigation -->
   <header>
@@ -23,13 +34,16 @@
     <br>
     <br>
     <br>
-    <br>
+    
     <!-- 카테고리 : S -->
 
     <div class="row">
-      
+        
       <div class="col-lg-12">
-
+        <h3><span style="color:black"><p style="text-align: center;">TOP</span></h3></p>
+        <br><br>
+        <h6><span style="color:#810707"><p style="text-align: center;"><b>All&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp긴팔티셔츠&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp맨투맨&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp후드&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp니트</b></span></h6></p></style>
+        <br><br>
       </div>
       <div class="col-lg-3 col-sm-6 text-center">
         <br>
@@ -214,4 +228,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
+
 </html>
