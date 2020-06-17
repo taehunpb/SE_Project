@@ -19,6 +19,8 @@ var mypage = require('./routes/mypage');
 var prolist = require('./routes/prolist');
 var seller_mypage = require('./routes/seller_mypage');
 var admin_mypage = require('./routes/admin_mypage');
+var purchase_list= require('./routes/purchase_list');
+var top = require('./routes/top');
 
 var app = express();
 
@@ -46,7 +48,8 @@ app.use('/admin_mypage',admin_mypage);
 app.use('/seller_mypage',seller_mypage);
 app.use('/userinfo',userinfo);
 app.use('/mypage',mypage);
-
+app.use('/purchase_list',purchase_list);
+app.use('/top', top);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

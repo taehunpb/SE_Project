@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style type = "text/css">	p{text-align : cennter;}</style>
+
+	<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<title>ICS</title>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	
+		
+	</head>
+<body >
+	<div style="overflow:scroll; width:100vw; height:100vh;">
+
+	<td><!--상단 메뉴 인클루드--><% include ./top1_user.ejs %></td>
+	<br><br><br>
+
+
+	<nav>
+		<div class="text-center">      
+			  <div class="btn-group" style="background-color:white-space">
+				<div col-md-3>
+				  <span class="input-group-btn">
+
+							<button type="button" class="btn btn-outline-secondary btn-lg" onclick="location.href='/purchase_list';">ORDER<br>주문내역 조회</button>
+							<button type="button" class="btn btn-outline-secondary btn-lg" onclick="location.href='/order';">PROFILE<br>회원정보 조회</button>
+							<button type="button" class="btn btn-outline-secondary btn-lg" onclick="location.href='/order';">WISHLIST<br>관심상품 조회</button>
+							<button type="button" class="btn btn-outline-secondary btn-lg" onclick="location.href='/order';">MILEAGE<br>적립금</button>
+							<button type="button" class="btn btn-outline-secondary btn-lg" onclick="location.href='/order';">COUPON<br>쿠폰</button>
+							<button type="button" class="btn btn-outline-secondary btn-lg" onclick="location.href='/order';">BOARD<br>게시물 관리</button>
+							<button type="button" class="btn btn-outline-secondary btn-lg" onclick="location.href='/order';">ADDRESS<br>배송 주소록 관리</button>
+				  </span>
+				</div>
+			  </div>
+		</div>
+	  </nav>
+      <br><br>
+
+
+<div class="text-center">      
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">주문내역조회</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">취소/환불/반품 내역</a>
+        </li>
+      </ul>
+
+</div>
+
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">주문일자</th>
+            <th scope="col">이미지</th>
+            <th scope="col">상품정보</th>
+            <th scope="col">수량</th>
+            <th scope="col">상품구매금액</th>
+            <th scope="col">주문처리상태</th>
+          </tr>
+
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">2020.06.16</th>
+           <td><img class="img-circle img-responsive img-center" src="/images/lee.jpg" with="10" height="150" ></td>
+            <td>빅 로고 반팔티 BIG LOGO HALF TEE-WHITE/NAVY </td>
+            <td>2개</td>
+            <td>51,700원</td>
+            <td>배송준비중</td>
+        </tr>
+        <tr>
+            <th scope="row">2020.06.10</th>
+           <td><img class="img-circle img-responsive img-center" src="/images/shoes.jpg" with="10" height="150" ></td>
+            <td> ELVA SANDAL(White)</td>
+            <td>1개</td>
+            <td>159,000원</td>
+            <td>배송준비중</td>
+        </tr>
+        <tr>
+            <th scope="row">2020.06.10</th>
+           <td><img class="img-circle img-responsive img-center" src="/images/pants.jpg" with="10" height="150" ></td>
+            <td>  Mine worker ST Develop / NewCrop </td>
+            <td>1개</td>
+            <td>81,100원</td>
+            <td>배송완료</td>
+        </tr>
+        </tbody>
+      </table>
+
+      <nav aria-label="...">
+            <ul class="pagination justify-content-center">
+
+          <li class="page-item disabled">
+            <span class="page-link">Previous</span>
+          </li>
+          
+          <li class="page-item active">
+              <class
+            <span class="page-link">
+              1
+              <span class="sr-only">(current)</span>
+            </span>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+</div>
+</body>
+</html>
