@@ -49,6 +49,7 @@ app.use('/seller_mypage',seller_mypage);
 app.use('/userinfo',userinfo);
 app.use('/mypage',mypage);
 app.use('/purchase_list',purchase_list);
+
 app.use('/top', top);
 
 // catch 404 and forward to error handler
