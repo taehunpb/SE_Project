@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
+
 // MySQL 로드
 var mysql = require('mysql');
 var pool = mysql.createPool({
