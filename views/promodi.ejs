@@ -34,10 +34,36 @@
             }
         }
     </style>
+    <style>
+          /* chrome, opera, safari */
+    input::-webkit-input-placeholder{
+        color:black;
+    }
+    /* IE 10 ~ */
+    input:-ms-input-placeholder{
+        color:black;
+    }
+    /* Firefox */
+    input::-moz-placeholder{
+        color:black;
+    }
+    /* chrome, opera, safari */
+    textarea::-webkit-input-placeholder{
+        color:black;
+    }
+    /* IE 10 ~ */
+    textarea:-ms-input-placeholder{
+        color:black;
+    }
+    /* Firefox */
+    textarea::-moz-placeholder{
+        color:black;
+    }
+    </style>
 </head>
 
 <body style="overflow:hidden;background-color:#f0f0f0;">
-    
+    <div style="overflow:scroll; width:100vw; height:100vh;">      
 <header>
     <td><!--상단 메뉴 인클루드--><% include ./top2_seller.ejs %></td>
 </header>
@@ -48,25 +74,26 @@
     <form id="joinForm" action='/promodi' method='post'  enctype = "multipart/form-data">
         <table class="table table-striped" width="400">
             <input type="hidden" name="team_id"/>
+            
             <tr>
                 <th>브랜드</th>
                 <td>
-                    <input type="text" name="show_name" id="show_name" required size="12" maxLength="12" placeholder="브랜드 명">
+                    <input style="color: #000000;" type="text" name="show_name" id="show_name" required size="12" maxLength="12" placeholder="COVERNAT">
                 </td>
             </tr>
 
             <tr>
                 <th>상품명</th>
                 <td>
-                    <input type="text" name="show_member" id="show_member" size="50" maxLength="50" placeholder="상품명을 입력하세요">
+                    <input type="text" name="show_member" id="show_member" size="50" maxLength="50" placeholder="하와이 오션 티셔츠 화이트">
                 </td>
             </tr>
 
             <tr>
                 <th>카테고리</th>
                 <td><select name="show_genre" id="show_genre">
-                        <option value ="OUTER">OUTER</option>
                         <option value ="TOP">TOP</option>
+                        <option value ="OUTER">OUTER</option>
                         <option value ="BOTTOM">BOTTOM</option>
                         <option value ="SHOES">SHOES</option>
                         <option value ="ACC">ACC</option>
@@ -76,29 +103,29 @@
             <tr>
                 <th>시즌/성별</th>
                 <td>
-                    <input type="text" name="show_start" id="show_start" size="15" maxLength="15" placeholder="시즌">
-                    <input type="text" name="show_end" id="show_end" size="15" maxLength="15" placeholder="성별">
+                    <input type="text" name="show_start" id="show_start" size="15" maxLength="15" placeholder="여름">
+                    <input type="text" name="show_end" id="show_end" size="15" maxLength="15" placeholder="여자">
                 </td>
             </tr>
 
             <tr>
                 <th>상품 소개</th>
                 <td>
-                    <textarea name="show_intro" id="show_intro" cols="40" rows="10" required placeholder="자신의 상품에 대해 설명하세요!"></textarea>
+                    <textarea name="show_intro" id="show_intro" cols="40" rows="10" required placeholder="예뻐요"></textarea>
                 </td>
             </tr>
 
             <tr>
                 <th>상품 가격</th>
                 <td>
-                    <input type="text" name="show_cost" id="show_cost" size="50" maxLength="30" placeholder="원래 상품 가격">
+                    <input type="text" name="show_cost" id="show_cost" size="50" maxLength="30" placeholder="32000">
                 </td>
                 
             </tr>
             <tr>
                 <th>할인된 상품 가격</th>
                     <td>
-                        <input type="text" name="show_cost" id="show_cost" size="50" maxLength="30" placeholder="할인 할 상품 가격, 할인이 싫다면 0 기입!">
+                        <input type="text" name="show_cost" id="show_cost" size="50" maxLength="30" placeholder="0">
                     </td>
             </tr>
             <tr>
