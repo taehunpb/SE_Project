@@ -45,7 +45,7 @@
 <body style="overflow:hidden;background-color:#f0f0f0;">
        <div style="overflow:scroll; width:100vw; height:100vh;">
 
-   <td><!--상단 메뉴 인클루드--><% include ./top_index.ejs %></td>
+   <td><!--상단 메뉴 인클루드--><% include ./top1_user.ejs %></td>
    <br><br><br>
     <div class="row">
       
@@ -55,7 +55,7 @@
         <div class="col-lg-6 col-sm-6 text-center">
           <br>
           <a href='/prolist' class="btn btn-secondary hoverbtn">
-                      <img class="img-circle img-responsive img-center" src="/images/covernat.jpg"with="50" height="550" alt="" id="theater">
+                      <img class="img-circle img-responsive img-center" src="images/IH_NOM_UH_NIT.jpg"with="50" height="550" alt="" id="theater">
           </a>
         </br>
           
@@ -70,11 +70,11 @@
                     <input type="hidden" name="team_id"/>
                     <tr>
                         <th>브랜드</th>
-                        <td>COVERNAT</td>
+                        <td>IH NOM UH NIT</td>
                     </tr>
                     <tr>
                         <th>상품명</th>
-                        <td>하와이 오션 티셔츠 화이트</td>
+                        <td>20SS 아카이브 반팔 두가지 NUS20232</td>
                     </tr>
                     <tr>
                         <th>옵션</th>
@@ -88,17 +88,17 @@
                     </tr>
                     <tr>
                         <th>상품소개</th>
-                        <td>하와이의 해변사진 그래픽과 커버낫을 세리프 폰트로 표현</td>
+                        <td>글로벌 럭셔리 패션 커뮤니티 파페치(Farfetch)에서 Ih Nom Uh Nit의 남성 의류 및 액세서리 컬렉션</td>
                     </tr>
                     <tr>
                         <th>상품가격</th>
                         <td><del  style="color: #808080;">
-                            32,000</del>&nbsp&nbsp
-                            23,400원</td>
+                            139,000</del>&nbsp&nbsp
+                            131,900원</td>
                     </tr>
                     <tr>
                         <th>평점</th>
-                        <td>★★★★☆</td>
+                        <td>★★★☆☆</td>
                     </tr>
             </table>
                    
@@ -110,18 +110,18 @@
         
           <br>
           <br>
-          <br><br><br><br>
+          <br>
         </div>
+</div>
+        <div class="well"><h5><span style="color:white">&nbsp&nbsp상품 상세 설명</span></h5></div>
+    
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <a href='/prolist1'>
+            <img class="img-circle img-responsive img-center" src="/images/12.jpg"width="800" height="900" alt="" id="theater">
+        </a> 
+        
 
     </div>
-    
-    <div class="well"><h5><span style="color:white">&nbsp&nbsp&nbsp&nbsp상품 상세 설명</span></h5></div>
-    
-    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-    <a href='/prolist'>
-        <img class="img-circle img-responsive img-center" src="/images/11.jpg"width="1000" height="9000" alt="" id="theater">
-</a>
-
     <div class="container-fluid">
     <div class="well"><h5><span style="color:white">구매 후기</span></h5></div>
         <div class="table-responsive">
@@ -134,72 +134,26 @@
                     <th>후기</th>
                 </tr>
                 </thead>
-                <tbody> 
+                <tbody>
                 <tr>
                     <td>김태훈</td>
-                    <td>★★★☆☆</td>
-                    <td>S</td>
-                    <td>옷이 너무 큽니다. 평소 사이즈보다 작게 선택하는게 나을 듯!</td>
+                    <td>★★★★☆</td>
+                    <td>L</td>
+                    <td>두 사람의 얼굴이 너무 멋있어요. 옷 질이 너무 좋아요!</td>
                 </tr>
                 <tr>
                     <td>전영팡</td>
                     <td>★★★★★</td>
-                    <td>XXL</td>
-                    <td>사진이랑 똑같아요! 재질도 좋고, 가격대비 좋은 듯!!</td>
+                    <td>XL</td>
+                    <td>얼굴이 생각보다 너무 커요. 가격에 비해 잘 안입을 듯!!</td>
                 </tr>
                 <tr>
                     <td>김수진</td>
-                    <td>★★★★☆</td>
-                    <td>M</td>
-                    <td>평소에 입고 다니기 좋아요~!</td>
+                    <td>★☆☆☆☆</td>
+                    <td>S</td>
+                    <td>평소에 입고 힘들어요. 사람들이 쳐다봐요ㅜ</td>
                 </tr>
-            </div></tbody>
+            </div>
         </div>
-        </div>
-        </div>
-        <div class="container">
-            
-            <br><br>
-            <form id="joinForm" action='/proregi' method='post'  enctype = "multipart/form-data">
-                <table class="table table-striped" width="200" height="100">
-                    <input type="hidden" name="team_id"/>
-                    <hr>
-                    <br>
-                    <h3 class="font-weight-bold" style="color: #810707;">후기 등록</h3>
-                    <tr>
-                        <th>평점</th>
-                        <td><select name="option" id="option">
-                                <option value ="★★★★★">★★★★★</option>
-                                <option value ="★★★★☆">★★★★☆</option>
-                                <option value ="★★★☆☆">★★★☆☆</option>
-                                <option value ="★★☆☆☆">★★☆☆☆</option>
-                                <option value ="★☆☆☆☆">★☆☆☆☆</option>
-                            </select></td>
-                    </tr>
-                    <tr>
-                        <th>사이즈</th>
-                        <td><select name="option" id="option">
-                                <option value ="S">S</option>
-                                <option value ="M">M</option>
-                                <option value ="L">L</option>
-                                <option value ="XL">XL</option>
-                                <option value ="XXL">XXL</option>
-                            </select></td>
-                    </tr>
-                    <tr>
-                        <th>내용</th>
-                        <td><input type="text" name="show_start" id="show_start" size="100" maxLength="15" placeholder="후기를 적어주세요."></td>
-                    </tr>
-            </table>
-                   
-        </br>   
-    <tr>
-        <td>
-            <div align="center">
-            <th rowspan="2"><input type="submit" value="후기 등록"/></th>
-        </div>
-        </td>
-    </tr>
-    <br><br><br>
 </body>
 </html>
